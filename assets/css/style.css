@@ -1,0 +1,25 @@
+/* Page d'accueil */
+
+Fieldset{border:5px solid #4e414f;margin-bottom:10px;width:720px}
+label:hover{font-size:35px}
+label{align:right; vertical-align:top}
+.lwid{width:180px; display:inline-block}
+.lauto{width:auto;display:inline-block}
+textarea{width:360px;height:50px}
+body{background-image:url(http://d3sk73qjanf67d.cloudfront.net/wp-content/uploads/2017/02/06080011/summer-love.jpg);
+background-size: cover;
+font-family: 'Shadows Into Light', cursive;
+color:#e06577;
+font-weight: bold;
+font-size: 20px;}
+header{
+  color: #ff6143;
+  font-family: 'Arima Madurai', cursive;
+  text-align: center;
+}
+legend{
+  font-family:'Arima Madurai';
+  color:#006994;
+}
+
+/* Fin page d'accueil*/
