@@ -1,0 +1,5 @@
+.bi-emoji-heart-eyes::before {
+    content: "\f31f";
+    font-size: -webkit-xxx-large;
+}
+
