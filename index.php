@@ -1,6 +1,5 @@
 <!-- Ajout de l'en-tête -->
 <?php
-session_start();
 include_once("header.php");
 ?>
 <title>Notre site de rencontres</title>
