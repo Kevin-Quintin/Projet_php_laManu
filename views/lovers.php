@@ -16,15 +16,6 @@ include_once("../controllers/lovers_controller.php");
 		</span>
 	</div>
 
-	<!-- Todo le navBar -->
-	<div class="container-fluid ">
-		<div class="row row-cols-1 row-cols-md-5 g-3">
-			<?php
-				creationDesCard(1,$homme,$femme);
-			?>
-		</div>
-	</div>
-
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="breadcrumb">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Bonjour <?= "nom de la personne" ?></a>
@@ -39,6 +30,14 @@ include_once("../controllers/lovers_controller.php");
 			</div>
 		</div>
 	</nav>
+
+	<div class="container-fluid ">
+		<div class="row row-cols-1 row-cols-md-5 g-3">
+			<?php
+				creationDesCard(1,$homme,$femme);
+			?>
+		</div>
+	</div>
 <?php
 include_once("../footer.php");
 ?>
