@@ -293,7 +293,7 @@ function creationCard($image, $nom, $prenom, $age, $codePostal, $desc)
 				</div>
 				<!-- A revoir car un soucis avec les like -->
 				<div class="row text-center">
-					<i class="bi bi-emoji-heart-eyes icone-eye"></i>
+					<i class="bi bi-emoji-heart-eyes icone-eye iconheart"></i>
 				</div>
 
 			</div>
