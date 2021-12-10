@@ -1,6 +1,5 @@
 <!-- Ajout de l'en-tête -->
 <?php
-session_start();
 include_once("header.php");
 ?>
   <title>Notre site de rencontres</title>
@@ -24,13 +23,13 @@ include_once("header.php");
 <h4>On veut tout savoir sur toi  </h4>
 
 <?php
-if (isset($_COOKIE["Nom"]) && !empty($_COOKIE["Nom"])
-&& isset($_COOKIE["Prenom"]) && !empty($_COOKIE["Prenom"])
-&& isset($_COOKIE["Age"]) && !empty($_COOKIE["Age"])
-&& isset($_COOKIE["Genre"]) && !empty($_COOKIE["Genre"])
-&& isset($_COOKIE["Courriel"]) && !empty($_COOKIE["Courriel"])
-&& isset($_COOKIE["Code_postal"]) && !empty($_COOKIE["Code_postal"])
-&& isset($_COOKIE["Type_recherche"]) && !empty($_COOKIE["Type_recherche"]))
+if (isset($_COOKIE["Nom"]) && ($_COOKIE["Nom"]!=='')
+&& isset($_COOKIE["Prenom"]) && ($_COOKIE["Prenom"]!=='')
+&& isset($_COOKIE["Age"]) && ($_COOKIE["Age"]!=='')
+&& isset($_COOKIE["Genre"]) && ($_COOKIE["Genre"]!=='')
+&& isset($_COOKIE["Courriel"]) && ($_COOKIE["Courriel"]!=='')
+&& isset($_COOKIE["Code_postal"]) && ($_COOKIE["Code_postal"]!=='')
+&& isset($_COOKIE["Type_recherche"]) && ($_COOKIE["Type_recherche"]!==''))
  
 { 
 header("Location: views\lovers.php");
@@ -102,12 +101,14 @@ header("Location: views\lovers.php");
 if (isset($_POST["rencontre"])) {
 
 setcookie("Nom",$_POST["Nom"], time()+3600*24); 
+
 setcookie("Prenom",$_POST["Prenom"], time()+3600*24); 
 setcookie("Age",$_POST["age"], time()+3600*24); 
 setcookie("Genre",$_POST["genre"], time()+3600*24); 
 setcookie("Courriel",$_POST["email"], time()+3600*24); 
 setcookie("Code_postal",$_POST["code"], time()+3600*24); 
 setcookie("Type_recherche",$_POST["recherche"], time()+3600*24);
+$_POST=null;
 header("Location: views\lovers.php");
 
 

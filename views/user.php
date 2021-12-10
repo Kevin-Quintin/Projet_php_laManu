@@ -3,16 +3,16 @@
 include_once("../header.php");
 include_once("../controllers/user_controller.php");
 ?>
-<div class="container mt-5 d-flex justify-content-center">
+<div class="container mt-5 d-flex justify-content-center text-dark">
     <!-- info profil -->
     <div>
-        <p class="fs-2 bg-primary text-white">Bonjour <?= $profil['prenom']?>, voici tes informations:</p>
+        <p class="fs-2 bg-primary text-white">Bonjour <?= $_COOKIE['Prenom']?>, voici tes informations:</p>
         <div class="row">
-            <div class="offset-sm-1 col-sm-2">
+            <div class="offset-sm-1 col-sm-2 ">
                 <p>Nom</p>
             </div>
             <div class=" col-sm-3">
-                <p><?= $profil['nom']?></p>
+                <p><?= $_COOKIE['Nom']?></p>
             </div>
         </div>
         <div class="row">
@@ -20,7 +20,7 @@ include_once("../controllers/user_controller.php");
                 <p>Prénom</p>
             </div>
             <div class=" col-sm-3">
-                <p><?= $profil['prenom']?></p>
+                <p><?= $_COOKIE['Prenom']?></p>
             </div>
         </div>
         <div class="row">
@@ -28,7 +28,7 @@ include_once("../controllers/user_controller.php");
                 <p>Age</p>
             </div>
             <div class=" col-sm-3">
-                <p><?= $profil['age']?></p>
+                <p><?= $_COOKIE['Age']?></p>
             </div>
         </div>
         <div class="row">
@@ -36,7 +36,7 @@ include_once("../controllers/user_controller.php");
                 <p>Genre</p>
             </div>
             <div class=" col-sm-3">
-               <p><?= $profil['genre']?></p>
+               <p><?= $_COOKIE['Genre']?></p>
             </div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@ include_once("../controllers/user_controller.php");
                <p>Code Postal</p>
             </div>
             <div class=" col-sm-3">
-                <p><?= $profil['cp']?></p>
+                <p><?= $_COOKIE['Code_postal']?></p>
             </div>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@ include_once("../controllers/user_controller.php");
                 <p>Email</p>
             </div>
             <div class=" col-sm-3">
-               <p><?= $profil['mail']?></p>
+               <p><?= $_COOKIE['Courriel']?></p>
             </div>
         </div>
         <div class="row">
@@ -60,7 +60,7 @@ include_once("../controllers/user_controller.php");
                <p>Recherche</p>
             </div>
             <div class=" col-sm-3">
-               <p><?= $profil['type']?></p>
+               <p><?= $_COOKIE['Type_recherche']?></p>
            </div>
         </div>
         <!-- boutons pour les redirections -->
@@ -68,26 +68,11 @@ include_once("../controllers/user_controller.php");
            <!-- Désinscrire -->
 
            <div class="d-flex">
-               <form method="post" action="#">
+               <form method="post" action="../controllers/user_controller.php">
                   <button type="submit" name="desinscrire" class="btn btn-danger me-2">Désinscrire</button>
                 </form>
-                <?php
-                    if(isset($_POST['desinscrire'])){
-                         // unset cookies
-                        if (isset($_SERVER['HTTP_COOKIE'])) {
-                        $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
-                        foreach($cookies as $cookie) {
-                            $parts = explode('=', $cookie);
-                            $name = trim($parts[0]);
-                            setcookie($name, '', time()-1000);
-                            setcookie($name, '', time()-1000, '/');
-                        }
-                    }
-                    header('location:../index.php');
-                }
-                ?>
                 <!-- Meetic -->
-                 <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">TAKE MY MONEY</a>
+                 <a href="https://www.meetic.fr" class="btn btn-primary" tabindex="-1" role="button" >TAKE MY MONEY</a>
             </div>
         </div>
     </div>

@@ -25,7 +25,7 @@ include_once("../controllers/lovers_controller.php");
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item active text-uppercase mt-3" aria-current="page">nos célibataires</li>
-					<li class="breadcrumb-item text-uppercase mt-3"><a href="#" class="text-decoration-none text-secondary">mes informations</a></li>
+					<li class="breadcrumb-item text-uppercase mt-3"><a href="user.php" class="text-decoration-none text-secondary">mes informations</a></li>
 				</ol>
 			</div>
 		</div>
