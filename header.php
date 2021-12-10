@@ -15,4 +15,4 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body class="bg-danger bg-opacity-10">

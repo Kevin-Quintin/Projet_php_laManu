@@ -1,5 +1,18 @@
-.bi-emoji-heart-eyes::before {
+.bi-emoji-heart-eyes::before bi-emoji-heart-eyes-fill::before bi-bookmark-heart::before {
     content: "\f31f";
     font-size: -webkit-xxx-large;
 }
 
+img {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+    width: 150px;
+    height: 300px;
+  }
+  
+  img:hover {
+    /* box-shadow: 10px 5px 5px red; */
+    /* box-shadow: inset 5em 1em gold; */
+    box-shadow: 3px 3px rgb(27, 231, 44), -1em 0 .4em rgb(26, 128, 0);
+  }
