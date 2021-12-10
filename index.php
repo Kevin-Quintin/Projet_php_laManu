@@ -28,7 +28,7 @@ include_once("header.php");
                 ) {
                     header("Location: views\lovers.php");
                 } else {    ?>
-                    <form method="post" action="#" class="row needs-validation fw-bold fs-3  d-flex justify-content-center" novalidate>
+                    <form method="post" action="controllers\index_controller.php" class="row needs-validation fw-bold fs-3  d-flex justify-content-center" novalidate>
                         <!-- <div class="form-row"> -->
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
                             <label class="form-label ">Nom</label>
@@ -39,7 +39,7 @@ include_once("header.php");
                         </div>
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
                             <label class="form-label">Prénom</label>
-                            <input type="text" name="Prenom" class="form-control" id="validationTooltip02" placeholder="Indique ton prénom" required>
+                            <input type="text" name="Prenom" minlength="6" class="form-control" id="validationTooltip02" placeholder="Indique ton prénom" required>
                             <div class="valid-feedback">
                             Looks good!
                             </div>
@@ -47,7 +47,7 @@ include_once("header.php");
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
 
                             <label class="form-label">Sélectionne ton âge</label>
-                            <input type="number" min="18" selected=18  max="100" name="age" required placeholder>
+                            <input type="number" min="18" value ="18" selected=18  max="100" name="age" required placeholder>
                         </div>
                         <!-- </div> -->
                         <div class="col-lg-8 col-sm-8 offset-0  ">
