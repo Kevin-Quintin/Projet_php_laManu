@@ -1,6 +1,7 @@
 <?php
 $homme = [
 	[
+		"id" => 1,
 		"nom" =>  "Gamble",
 		"prenom" =>  "Gary",
 		"age" =>  92,
@@ -12,6 +13,7 @@ $homme = [
 		"description" =>  "Walter Mathews"
 	],
 	[
+		"id" => 2,
 		"nom" =>  "Powers",
 		"prenom" =>  "Chaney",
 		"age" =>  23,
@@ -23,6 +25,7 @@ $homme = [
 		"description" =>  "Zachery Shepherd"
 	],
 	[
+		"id" => 3,
 		"nom" =>  "Bridges",
 		"prenom" =>  "Holmes",
 		"age" =>  26,
@@ -34,6 +37,7 @@ $homme = [
 		"description" =>  "Keaton Webster"
 	],
 	[
+		"id" => 4,
 		"nom" =>  "Cantrell",
 		"prenom" =>  "Walker",
 		"age" =>  33,
@@ -45,6 +49,7 @@ $homme = [
 		"description" =>  "Hayes Humphrey"
 	],
 	[
+		"id" => 5,
 		"nom" =>  "Morrow",
 		"prenom" =>  "Logan",
 		"age" =>  71,
@@ -56,6 +61,7 @@ $homme = [
 		"description" =>  "Cally Hicks"
 	],
 	[
+		"id" => 6,
 		"nom" =>  "Weeks",
 		"prenom" =>  "Rahim",
 		"age" =>  81,
@@ -67,6 +73,7 @@ $homme = [
 		"description" =>  "Raymond Chase"
 	],
 	[
+		"id" => 7,
 		"nom" =>  "Fox",
 		"prenom" =>  "Aidan",
 		"age" =>  67,
@@ -78,6 +85,7 @@ $homme = [
 		"description" =>  "Zenia Boyd"
 	],
 	[
+		"id" => 8,
 		"nom" =>  "Leon",
 		"prenom" =>  "Quinlan",
 		"age" =>  61,
@@ -89,6 +97,7 @@ $homme = [
 		"description" =>  "Eve Watts"
 	],
 	[
+		"id" => 9,
 		"nom" =>  "England",
 		"prenom" =>  "Vladimir",
 		"age" =>  87,
@@ -100,6 +109,7 @@ $homme = [
 		"description" =>  "Bethany Hendricks"
 	],
 	[
+		"id" => 10,
 		"nom" =>  "Moore",
 		"prenom" =>  "Flynn",
 		"age" =>  99,
@@ -114,6 +124,7 @@ $homme = [
 
 $femme = [
 	[
+		"id" => 11,
 		"nom" =>  "Hopper",
 		"prenom" =>  "Amena",
 		"age" =>  25,
@@ -125,6 +136,7 @@ $femme = [
 		"description" =>  "Zena Lyons"
 	],
 	[
+		"id" => 12,
 		"nom" =>  "Bowen",
 		"prenom" =>  "Molly",
 		"age" =>  83,
@@ -136,6 +148,7 @@ $femme = [
 		"description" =>  "Illana Russell"
 	],
 	[
+		"id" => 13,
 		"nom" =>  "Hendricks",
 		"prenom" =>  "Xyla",
 		"age" =>  12,
@@ -147,6 +160,7 @@ $femme = [
 		"description" =>  "Nolan Clarke"
 	],
 	[
+		"id" => 14,
 		"nom" =>  "Peck",
 		"prenom" =>  "Nelle",
 		"age" =>  46,
@@ -158,6 +172,7 @@ $femme = [
 		"description" =>  "Raja Warren"
 	],
 	[
+		"id" => 15,
 		"nom" =>  "Haynes",
 		"prenom" =>  "Ima",
 		"age" =>  15,
@@ -169,6 +184,7 @@ $femme = [
 		"description" =>  "Hedda Woodard"
 	],
 	[
+		"id" => 16,
 		"nom" =>  "Russo",
 		"prenom" =>  "Jenna",
 		"age" =>  23,
@@ -180,6 +196,7 @@ $femme = [
 		"description" =>  "Nicholas Kent"
 	],
 	[
+		"id" => 17,
 		"nom" =>  "Kirkland",
 		"prenom" =>  "Hadassah",
 		"age" =>  37,
@@ -191,6 +208,7 @@ $femme = [
 		"description" =>  "Vaughan O'connor"
 	],
 	[
+		"id" => 18,
 		"nom" =>  "Carlson",
 		"prenom" =>  "Scarlet",
 		"age" =>  28,
@@ -202,6 +220,7 @@ $femme = [
 		"description" =>  "Timothy Barnes"
 	],
 	[
+		"id" => 19,
 		"nom" =>  "Bradley",
 		"prenom" =>  "Raven",
 		"age" =>  54,
@@ -213,6 +232,7 @@ $femme = [
 		"description" =>  "Debra Mercado"
 	],
 	[
+		"id" => 20,
 		"nom" =>  "Cortez",
 		"prenom" =>  "McKenzie",
 		"age" =>  26,
@@ -225,104 +245,63 @@ $femme = [
 	]
 ];
 
-foreach ($femme as $key => $value) {
-	foreach ($value as $clef => $valeur) {
-		// echo $clef . " => " . $valeur;
-		
-	}
-}
 
-function creationDesCard($genre, $homme, $femme) {
+function creationDesCard($genre, $homme, $femme)
+{
 	// Par defaut lors de la creation le like est à 0 si like passe à 1
-	$like=0;
+	$like = 0;
 
 	// Si l'utilisateur clique sur les hommes, affichage de tous les hommes
-	if($genre == 1) {
+	if ($genre == 1) {
 		foreach ($homme as $key => $value) {
-			creationCard($value['picture'], $value['nom'], $value['prenom'], $value['age'], $value['postalZip'],$value['description']);
+			creationCard($value['picture'], $value['nom'], $value['prenom'], $value['age'], $value['postalZip'], $value['description']);
 		}
 	}
 	// Si l'utilisateur clique sur les hommes, affichage de tous les hommes
-	else if($genre == 0) {
+	else if ($genre == 0) {
 		foreach ($femme as $key => $value) {
-			creationCard($value['picture'], $value['nom'], $value['prenom'], $value['age'], $value['postalZip'],$value['description']);
+			creationCard($value['picture'], $value['nom'], $value['prenom'], $value['age'], $value['postalZip'], $value['description']);
 		}
-	} 
+	}
 }
 
 
-function creationCard($image,$nom,$prenom,$age,$codePostal,$desc) {
-	?>	
-		<div class="col">
-			<div class="card">
-				<img src="../assets/img/<?=$image ?>" class="card-img-top " alt="<?= $image ?>">
-				<div class="card-header ">
-					<div class="row h3">
-						<div class="col-9 ">	
-							<h4><?= $prenom?></h4>
-							<h4 class="text-secondary"><?= $nom ?></h4>
-							
-						</div>  
-						<div class="col-3 text-end h4">
-							<?= $age ?>
-						</div>
-					</div>
-				</div>
-				<div class="card-body">
-					<div class="row p-2 m-2">
-						<p class="card-text text-start fs-5 p-2">
-							<?= $desc ?>
-						</p>
-					</div>
-					<!-- A revoir car un soucis avec les like -->
-					<div class="row text-center">
-						<?php
-						if(!isset($_POST[$nom])) {
-							if (!isset($_COOKIE[$nom])) {
-								?>
-									<form method ="POST"  name="like" action="#" >
-										<button type="submit" class="border border-0 " name="<?= $nom ?>">
-											<i class="bi bi-emoji-heart-eyes"></i>
-										</button>
-									</form>
-								<?php
 
-							} else {
-								?>
-									<button  type="submit" class="border border-0 text-danger">
-										<i class="bi bi-emoji-heart-eyes-fill"></i>
-									</button>
-								<?php
-							}
-						}
-						
-						if (isset($_POST[$nom])) {
-							if (!isset($_COOKIE[$nom])) {
-								setcookie($nom,true,time()+3600*24);
-								?>
-									<button  type="submit" class="border border-0 text-danger">
-										<i class="bi bi-emoji-heart-eyes-fill"></i>
-									</button>
-								<?php
-							} else {
-								setcookie($nom,false,time()-3600*24);
-								?>
-									<form method ="POST"  name="like" action="#" >
-										<button type="submit" class="border border-0" name="<?= $nom ?>">
-											<i class="bi bi-emoji-heart-eyes"></i>
-										</button>
-									</form>
-								<?php
-							}
-						}
-						?>
+function creationCard($image, $nom, $prenom, $age, $codePostal, $desc)
+{
+?>
+	<div class="col">
+		<div class="card">
+			<img src="../assets/img/<?= $image ?>" class="card-img-top " alt="<?= $image ?>">
+			<div class="card-header ">
+				<div class="row h3">
+					<div class="col-9 ">
+						<h4><?= $prenom ?></h4>
+						<h4 class="text-secondary"><?= $nom ?></h4>
+
 					</div>
-				</div>
-				<div class="card-footer h3 text-center">
-					<?= $codePostal ?>
+					<div class="col-3 text-end h4">
+						<?= $age ?>
+					</div>
 				</div>
 			</div>
+			<div class="card-body">
+				<div class="row p-2 m-2">
+					<p class="card-text text-start fs-5 p-2">
+						<?= $desc ?>
+					</p>
+				</div>
+				<!-- A revoir car un soucis avec les like -->
+				<div class="row text-center">
+					<i class="bi bi-emoji-heart-eyes icone-eye"></i>
+				</div>
+
+			</div>
+			<div class="card-footer h3 text-center">
+				<?= $codePostal ?>
+			</div>
 		</div>
-	<?php
+	</div>
+<?php
 }
 ?>
