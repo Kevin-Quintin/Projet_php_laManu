@@ -2,7 +2,7 @@
 <?php
 include_once("header.php");
 ?>
-    <h1>Hello, world!</h1>
+    <h1 id="test">Hello, world!</h1>
 
 <!-- Ajout du pied de page -->
 <?php
