@@ -3,80 +3,72 @@
 include_once("../header.php");
 include_once("../controllers/user_controller.php");
 ?>
-<div class="container mt-5 d-flex justify-content-center text-dark">
+<div class="container-fluid mt-5 d-flex justify-content-center ">
     <!-- info profil -->
-    <div>
-        <p class="fs-2 bg-primary text-white">Bonjour <?= $_COOKIE['Prenom']?>, voici tes informations:</p>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2 ">
-                <p>Nom</p>
+    <div class="row p-5">
+        <div class="col-md-12">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active h3 text-center">Bonjour <?= $_COOKIE['Prenom']?>, voici tes informations :</a>
             </div>
-            <div class=" col-sm-3">
-                <p><?= $_COOKIE['Nom']?></p>
+            <div class="list-group-item fs-5 ">
+                Veuillez trouver vos informations saisies lors de l'inscription
             </div>
-        </div>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2">
-                <p>Prénom</p>
-            </div>
-            <div class=" col-sm-3">
-                <p><?= $_COOKIE['Prenom']?></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2">
-                <p>Age</p>
-            </div>
-            <div class=" col-sm-3">
-                <p><?= $_COOKIE['Age']?></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2">
-                <p>Genre</p>
-            </div>
-            <div class=" col-sm-3">
-               <p><?= $_COOKIE['Genre']?></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2">
-               <p>Code Postal</p>
-            </div>
-            <div class=" col-sm-3">
-                <p><?= $_COOKIE['Code_postal']?></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2">
-                <p>Email</p>
-            </div>
-            <div class=" col-sm-3">
-               <p><?= $_COOKIE['Courriel']?></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-sm-1 col-sm-2">
-               <p>Recherche</p>
-            </div>
-            <div class=" col-sm-3">
-               <p><?= $_COOKIE['Type_recherche']?></p>
-           </div>
-        </div>
-        <!-- boutons pour les redirections -->
-        <div class="row">
-           <!-- Désinscrire -->
-
-           <div class="d-flex">
-               <form method="post" action="../controllers/user_controller.php">
-                  <button type="submit" name="desinscrire" class="btn btn-danger me-2">Désinscrire</button>
-                </form>
-                <!-- Meetic -->
-                 <a href="https://www.meetic.fr" class="btn btn-primary" tabindex="-1" role="button" >TAKE MY MONEY</a>
-            </div>
+       
+            <ul class="list-group">
+                <li class="list-group-item  h5"> 
+                    <form  action="user.php" method="GET" class="">
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Votre nom : <?= $_COOKIE['Nom']?>
+                            </label>
+                        </div>
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Votre prénom : <?= $_COOKIE['Prenom']?>
+                            </label>
+                        </div>
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Votre âge : <?= $_COOKIE['Age']?>
+                            </label>
+                        </div>
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Genre : <?= $_COOKIE['Genre']?>
+                            </label>
+                        </div>
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Votre code postal : <?= $_COOKIE['Code_postal']?>
+                            </label>
+                        </div>
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Votre mail : <?= $_COOKIE['Courriel']?>
+                            </label>
+                        </div>
+                        <div class="form-group m-2 py-2">
+                            <label >
+                                Votre type de recherche : <?= $_COOKIE['Type_recherche']?>
+                            </label>
+                        </div>
+                    </form>
+                    <!-- boutons pour les redirections -->
+                    <div class="d-flex justify-content-between"> 
+                        <!-- Désinscrire -->
+                        <form method="post" action="../controllers/user_controller.php">
+                            <button type="submit" name="desinscrire" class="btn btn-danger me-2 btn-lg ">Désinscrire</button>
+                        </form>
+                        <!-- Meetic -->
+                        <a href="https://www.meetic.fr" class="btn btn-primary btn-lg me-2" tabindex="-1" role="button" >TAKE MY MONEY</a>
+                    </div>
+                
+                </li>
+            </ul>
         </div>
     </div>
 </div>
+
 <!-- Ajout du pied de page -->
 <?php
 include_once("../footer.php");

@@ -5,11 +5,11 @@
 	for (let i = 0; i < heart.length; i++) {
 
 		heart[i].addEventListener('click', () => {
-			if (heart[i].className == "bi bi-emoji-heart-eyes icone-eye") {
-				heart[i].className = "bi bi-emoji-heart-eyes-fill icone-eye";
+			if (heart[i].className == "bi bi-emoji-heart-eyes icone-eye iconheart") {
+				heart[i].className = "bi bi-emoji-heart-eyes-fill icone-eye iconheart iconcolor";
 				localStorage.setItem('fill', true);
-			} else if (heart[i].className == "bi bi-emoji-heart-eyes-fill icone-eye") {
-				heart[i].className = "bi bi-emoji-heart-eyes icone-eye";
+			} else if (heart[i].className == "bi bi-emoji-heart-eyes-fill icone-eye iconheart iconcolor") {
+				heart[i].className = "bi bi-emoji-heart-eyes icone-eye iconheart";
 				localStorage.setItem('fill', false);
 			}
 		})
