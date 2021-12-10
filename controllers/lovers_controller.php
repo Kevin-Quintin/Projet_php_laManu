@@ -256,7 +256,7 @@ function creationCard($image,$nom,$prenom,$age,$codePostal,$desc) {
 		<div class="col">
 			<div class="card">
 				<img src="../assets/img/<?=$image ?>" class="card-img-top " alt="<?= $image ?>">
-				<div class="card-header ">
+				<div class="card-header">
 					<div class="row h3">
 						<div class="col-9 ">	
 							<h4><?= $prenom?></h4>
@@ -282,7 +282,7 @@ function creationCard($image,$nom,$prenom,$age,$codePostal,$desc) {
 								?>
 									<form method ="POST"  name="like" action="#" >
 										<button type="submit" class="border border-0 " name="<?= $nom ?>">
-											<i class="bi bi-emoji-heart-eyes"></i>
+											<i class="bi bi-emoji-heart-eyes iconheart"></i>
 										</button>
 									</form>
 								<?php
@@ -290,7 +290,7 @@ function creationCard($image,$nom,$prenom,$age,$codePostal,$desc) {
 							} else {
 								?>
 									<button  type="submit" class="border border-0 text-danger">
-										<i class="bi bi-emoji-heart-eyes-fill"></i>
+										<i class="bi bi-emoji-heart-eyes-fill iconheart"></i>
 									</button>
 								<?php
 							}
@@ -301,7 +301,7 @@ function creationCard($image,$nom,$prenom,$age,$codePostal,$desc) {
 								setcookie($nom,true,time()+3600*24);
 								?>
 									<button  type="submit" class="border border-0 text-danger">
-										<i class="bi bi-emoji-heart-eyes-fill"></i>
+										<i class="bi bi-emoji-heart-eyes-fill iconheart"></i>
 									</button>
 								<?php
 							} else {
@@ -309,7 +309,7 @@ function creationCard($image,$nom,$prenom,$age,$codePostal,$desc) {
 								?>
 									<form method ="POST"  name="like" action="#" >
 										<button type="submit" class="border border-0" name="<?= $nom ?>">
-											<i class="bi bi-emoji-heart-eyes"></i>
+											<i class="bi bi-emoji-heart-eyes iconheart"></i>
 										</button>
 									</form>
 								<?php
