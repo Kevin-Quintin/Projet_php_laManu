@@ -25,8 +25,20 @@ include_once("../controllers/lovers_controller.php");
 		</div>
 	</div>
 
-<!-- Ajout du pied de page -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="breadcrumb">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Bonjour <?= "nom de la personne" ?></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active text-uppercase mt-3" aria-current="page">nos célibataires</li>
+					<li class="breadcrumb-item text-uppercase mt-3"><a href="#" class="text-decoration-none text-secondary">mes informations</a></li>
+				</ol>
+			</div>
+		</div>
+	</nav>
 <?php
 include_once("../footer.php");
 ?>
-
