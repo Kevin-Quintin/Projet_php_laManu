@@ -18,7 +18,7 @@ include_once("../controllers/lovers_controller.php");
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="breadcrumb">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Bonjour <?= "nom de la personne" ?></a>
+			<a class="navbar-brand" href="#">Bonjour <?= $_COOKIE['Nom'] ?></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -35,7 +35,8 @@ include_once("../controllers/lovers_controller.php");
 	<div class="container-fluid ">
 		<div class="row row-cols-1 row-cols-md-5 g-3">
 			<?php
-				creationDesCard(1,$homme,$femme);
+				// Affiche les genres choisis par la personne inscrite
+				creationDesCard($_COOKIE['Type_recherche'],$homme,$femme);
 			?>
 		</div>
 	</div>
