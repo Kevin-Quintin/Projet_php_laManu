@@ -2,7 +2,6 @@
 <?php
 include_once("../header.php");
 include_once("../controllers/lovers_controller.php");
-include_once("../header.php");
 
 ?>
 	<div class="text-center py-3">
@@ -30,11 +29,11 @@ include_once("../header.php");
 		</div>
 	</nav>
 
-	<div class="container-fluid ">
-		<div class="row row-cols-1 row-cols-md-5 g-3">
+	<div class="container-fluid my-2">
+		<div class="row row-cols-1 row-cols-md-5 g-2">
 			<?php
 				// Affiche les genres choisis par la personne inscrite
-				creationDesCard($_COOKIE['Type_recherche'],$homme,$femme);
+				creationDesCard($_COOKIE['Recherche'],$homme,$femme);
 			?>
 		</div>
 	</div>

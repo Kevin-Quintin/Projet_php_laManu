@@ -252,13 +252,13 @@ function creationDesCard($genre, $homme, $femme)
 	$like = 0;
 
 	// Si l'utilisateur clique sur les hommes, affichage de tous les hommes
-	if ($genre == 1) {
+	if ($genre == "2") {
 		foreach ($homme as $key => $value) {
 			creationCard($value['picture'], $value['nom'], $value['prenom'], $value['age'], $value['postalZip'], $value['description']);
 		}
 	}
 	// Si l'utilisateur clique sur les hommes, affichage de tous les hommes
-	else if ($genre == 0) {
+	else if ($genre == "1") {
 		foreach ($femme as $key => $value) {
 			creationCard($value['picture'], $value['nom'], $value['prenom'], $value['age'], $value['postalZip'], $value['description']);
 		}
@@ -270,8 +270,8 @@ function creationDesCard($genre, $homme, $femme)
 function creationCard($image, $nom, $prenom, $age, $codePostal, $desc)
 {
 ?>
-	<div class="col">
-		<div class="card">
+	<div class="col d-flex justify-content-center my-3">
+		<div class="card" style="width: 18rem;">
 			<img src="../assets/img/<?= $image ?>" class="card-img-top " alt="<?= $image ?>">
 			<div class="card-header ">
 				<div class="row h3">
