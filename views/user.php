@@ -8,10 +8,10 @@ if ($_COOKIE['Recherche'] == "1") {
     $genreRecherche = "Homme";
 }
 ?>
-<div class="container mt-5 d-flex justify-content-center text-dark fond">
+<div class="container mt-5 d-flex justify-content-center text-dark fond border rounded-5">
     <!-- info profil -->
     <div class=" my-5 w-75 fw-bold fs-3">
-        <p class="fs-2 bg-primary text-white">Bonjour <?= $_COOKIE['Prenom'] ?>, voici tes informations:</p>
+        <div class="fs-2 bg-primary text-white border border-4 rounded">Bonjour <?= $_COOKIE['Prenom'] ?>, voici tes informations:</div>
         <div class="row">
             <div class="offset-sm-1 col-sm-2 ">
                 <p>Nom</p>
