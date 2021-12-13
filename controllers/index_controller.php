@@ -56,21 +56,20 @@ else {
 }
 
 if (isset($_POST["rencontre"])) {
-   setcookie("Nom", $nom, time() - 3600, "/");
-   setcookie("Prenom", $prenom, time() - 3600, "/");
-   setcookie("Age", $age, time() - 3600, "/");
-   setcookie("Genre", $genre, time() - 3600, "/");
-   setcookie("Courriel", $email, time() - 3600, "/");
-   setcookie("Code", $codepostal, time() - 3600, "/");
-   setcookie("Recherche", $recherche, time() - 3600, "/");
+   setcookie("Nom", "", time() - 3600, "/");
+   setcookie("Prenom", "", time() - 3600, "/");
+   setcookie("Age", "", time() - 3600, "/");
+   setcookie("Genre", "", time() - 3600, "/");
+   setcookie("Courriel", "", time() - 3600, "/");
+   setcookie("Code_postal", "", time() - 3600, "/");
+   setcookie("Type_recherche", "", time() - 3600, "/");
 
    setcookie("Nom", $nom, time() + 3600 * 24, "/");
    setcookie("Prenom", $prenom, time() + 3600 * 24, "/");
    setcookie("Age", $age, time() + 3600 * 24, "/");
    setcookie("Genre", $genre, time() + 3600 * 24, "/");
    setcookie("Courriel", $email, time() + 3600 * 24, "/");
-   setcookie("Code", $codepostal, time() + 3600 * 24, "/");
-   setcookie("Recherche", $recherche, time() + 3600 * 24, "/");
+   setcookie("Code_postal", $codepostal, time() + 3600 * 24, "/");
+   setcookie("Type_recherche", $recherche, time() + 3600 * 24, "/");
    header("Location: ../views/lovers.php");
-   // var_dump($_COOKIE['Recherche']);
 }

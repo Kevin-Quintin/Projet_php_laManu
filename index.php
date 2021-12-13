@@ -1,6 +1,5 @@
 <!-- Ajout de l'en-tête -->
 <?php
-session_start();
 include_once("header.php");
 
 if (isset($_POST["rencontre"])) {
@@ -15,13 +14,12 @@ if (isset($_POST["rencontre"])) {
 }
 
 ?>
-<title>Notre site de rencontres</title>
 <div class="container-fluid">
-    <div class="row d-flex justify-content-center text-center">
-        <header>
-            <h1 class="py-5 fw-bold">BIENVENUE JEUNE <i class="bi bi-heart-fill"></i> LOVER <i class="bi bi-heart-fill"></i>
-        </header>
-    </div>
+    <header>
+        <div class="row d-flex justify-content-center text-center">
+            <h1 class="py-3 fw-bold">BIENVENUE JEUNE <i class="bi bi-heart-fill"></i> LOVER <i class="bi bi-heart-fill"></i></h1>
+        </div>
+    </header>
 
     <div class="row d-flex justify-content-center g-3 ">
         <!-- Image de fond -->
@@ -60,56 +58,53 @@ if (isset($_POST["rencontre"])) {
                                 Looks good!
                             </div>
                         </div>
-                        <div class="col-lg-8 col-sm-8 offset-0 mb-3">
+                    <div class="col-lg-8 col-sm-8 offset-0 mb-3">
 
-                            <label for="age" class="form-label">Sélectionne ton âge</label>
-                            <input type="number" min="18" value ="18" selected=18  max="100" name="age" id="age" required placeholder>
+                        <label for="age" class="form-label">Sélectionne ton âge</label>
+                        <input type="number" min="18" value="18" max="100" name="age" id="age" onKeyDown="return false" required placeholder>
+                    </div>
+                    <!-- </div> -->
+                    <div class="col-lg-8 col-sm-8 offset-0  ">
+                        <label for="genre" class="form-label">Genre</label>
+                        <select Name="genre" class="form-select" id="genre" required>
+                            <option value="1" selected>Femme</option>
+                            <option value="2">Homme</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
                         </div>
-                        <!-- </div> -->
-                        <div class="col-lg-8 col-sm-8 offset-0  ">
-                            <label for="genre" class="form-label">Genre</label>
-                            <select Name="genre" class="form-select" id="genre" required>
-                                <option value="1" selected>Femme</option>
-                                <option value="2">Homme</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid state.
-                            </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-8 offset-0 mb-3">
+                        <label for="email" class="form-label">Courriel</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email valide" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
                         </div>
-                        <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label for="email" class="form-label">Courriel</label>
-                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email valide" required>
-                            <div class="invalid-feedback">
-                                Please choose a username.
-                            </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-8 offset-0 mb-3">
+                        <label for="code" class="form-label">Code postal</label>
+                        <input type="text" class="form-control" name="code" id="code" placeholder="Code postal" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
                         </div>
-                        <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label for="code" class="form-label">Code postal</label>
-                            <input type="text" class="form-control"  name="code" id="code" placeholder="Code postal" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid zip.
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label for="recherche" class="form-label">Que cherche-tu? </label>
-                            <select name="recherche" class="form-select" id="recherche">
-                                <option value="1">Une femme</option>
-                                <option value="2" selected>Un homme</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-6  col-sm-6 offset-0 mb-3 text-center">
-                            <button class="btn btn-primary btn-lg py-3 fs-4 fw-bold" type="submit" name="rencontre">
-                                Rencontrez nos célibataires
-                            </button>
-                        </div>
-                    </form> 
+                    </div>
+                    <div class="col-lg-8 col-sm-8 offset-0 mb-3">
+                        <label for="recherche" class="form-label">Que cherche-tu? </label>
+                        <select name="recherche" class="form-select" id="recherche">
+                            <option value="1">Une femme</option>
+                            <option value="2" selected>Un homme</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6  col-sm-6 offset-0 mb-3 text-center">
+                        <button class="btn btn-primary btn-lg py-3 fs-4 fw-bold" type="submit" name="rencontre">
+                            Rencontrez nos célibataires
+                        </button>
+                    </div>
+                </form>
             <?php
-                }
-                ?>
+            }
+            ?>
         </div>
-    </div>
-    <div class="row py-5"></div>
-</div>
 <!-- Ajout du pied de page -->
 <?php
 include_once("footer.php");
