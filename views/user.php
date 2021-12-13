@@ -7,6 +7,12 @@ if ($_COOKIE['Recherche'] == "1") {
 } else {
     $genreRecherche = "Homme";
 }
+
+if ($_COOKIE['Genre'] == "1") {
+    $genre = "Femme";
+} else {
+    $genre = "Homme";
+}
 ?>
 <div class="container-fluid mt-5 d-flex justify-content-center ">
     <!-- info profil -->
@@ -39,12 +45,12 @@ if ($_COOKIE['Recherche'] == "1") {
                         </div>
                         <div class="form-group m-2 py-2">
                             <label >
-                                Genre : <?= $_COOKIE['Genre']?>
+                                Genre : <?= $genre ?>
                             </label>
                         </div>
                         <div class="form-group m-2 py-2">
                             <label >
-                                Votre code postal : <?= $_COOKIE['Code_postal']?>
+                                Votre code postal : <?= $_COOKIE['Code']?>
                             </label>
                         </div>
                         <div class="form-group m-2 py-2">
@@ -54,7 +60,7 @@ if ($_COOKIE['Recherche'] == "1") {
                         </div>
                         <div class="form-group m-2 py-2">
                             <label >
-                                Votre type de recherche : <?= $_COOKIE['Type_recherche']?>
+                                Votre type de recherche : <?= $genreRecherche?>
                             </label>
                         </div>
                     </form>

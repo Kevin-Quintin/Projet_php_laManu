@@ -44,7 +44,7 @@ if (isset($_POST["code"]) && !empty($_POST ["code"])){
    $codepostal = $_POST["code"];
    }
 else { 
-   echo "Erreur, le code_postalest est manquant";
+   echo "Erreur, le code_postal est est manquant";
 }
 
 // Je stocke le type de recherche
@@ -56,13 +56,13 @@ else {
 }
 
 if (isset($_POST["rencontre"])) {
-   setcookie("Nom", $nom, time() - 3600);
-   setcookie("Prenom", $prenom, time() - 3600);
-   setcookie("Age", $age, time() - 3600);
-   setcookie("Genre", $genre, time() - 3600);
-   setcookie("Courriel", $email, time() - 3600);
-   setcookie("Code", $codepostal, time() - 3600);
-   setcookie("Recherche", $recherche, time() - 3600);
+   setcookie("Nom", $nom, time() - 3600, "/");
+   setcookie("Prenom", $prenom, time() - 3600, "/");
+   setcookie("Age", $age, time() - 3600, "/");
+   setcookie("Genre", $genre, time() - 3600, "/");
+   setcookie("Courriel", $email, time() - 3600, "/");
+   setcookie("Code", $codepostal, time() - 3600, "/");
+   setcookie("Recherche", $recherche, time() - 3600, "/");
 
    setcookie("Nom", $nom, time() + 3600 * 24, "/");
    setcookie("Prenom", $prenom, time() + 3600 * 24, "/");
