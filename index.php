@@ -47,27 +47,28 @@ if (isset($_POST["rencontre"])) {
                     <form method="POST" action="#" class="row needs-validation fw-bold fs-3  d-flex justify-content-center" novalidate>
                         <!-- <div class="form-row"> -->
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label" for="validationServer01" >Nom</label>
-                            <input type="text" name="Nom" class="form-control form-control-lg" id="validationServer01" placeholder="Indique ton nom" required>
+                            <label for="nom" class="form-label ">Nom</label>
+                            <input type="text" name="Nom" class="form-control" id="nom" placeholder="Indique ton nom" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label">Prénom</label>
-                            <input type="text" name="Prenom" class="form-control form-control-lg" id="validationTooltip02" placeholder="Indique ton prénom" required>
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" name="Prenom" minlength="6" class="form-control" id="prenom" placeholder="Indique ton prénom" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label">Sélectionne ton âge</label>
-                            <input type="number" min="18" max="100" name="age" placeholder="18"  class="form-select form-select-lg" required>
+
+                            <label for="age" class="form-label">Sélectionne ton âge</label>
+                            <input type="number" min="18" value ="18" selected=18  max="100" name="age" id="age" required placeholder>
                         </div>
                         <!-- </div> -->
-                        <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label">Genre</label>
-                            <select name="genre" class="form-select form-select-lg" id="inlineFormCustomSelectPref" required>
+                        <div class="col-lg-8 col-sm-8 offset-0  ">
+                            <label for="genre" class="form-label">Genre</label>
+                            <select Name="genre" class="form-select" id="genre" required>
                                 <option value="1" selected>Femme</option>
                                 <option value="2">Homme</option>
                             </select>
@@ -76,24 +77,24 @@ if (isset($_POST["rencontre"])) {
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label">Courriel</label>
-                            <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email valide" required>
+                            <label for="email" class="form-label">Courriel</label>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email valide" required>
                             <div class="invalid-feedback">
                                 Please choose a username.
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label">Code postal</label>
-                            <input type="text" class="form-control form-control-lg"  name="code" id="validationTooltip05" placeholder="Code postal" required>
+                            <label for="code" class="form-label">Code postal</label>
+                            <input type="text" class="form-control"  name="code" id="code" placeholder="Code postal" required>
                             <div class="invalid-feedback">
                                 Please provide a valid zip.
                             </div>
                         </div>
                         <div class="col-lg-8 col-sm-8 offset-0 mb-3">
-                            <label class="form-label">Que cherche-tu? </label>
-                            <select name="recherche" class="form-select form-select-lg" id="inlineFormCustomSelectPref">
-                                <option value="0" selected>Une femme</option>
-                                <option value="1" >Un homme</option>
+                            <label for="recherche" class="form-label">Que cherche-tu? </label>
+                            <select name="recherche" class="form-select" id="recherche">
+                                <option value="1">Une femme</option>
+                                <option value="2" selected>Un homme</option>
                             </select>
                         </div>
                         <div class="col-lg-6  col-sm-6 offset-0 mb-3 text-center">
@@ -104,7 +105,7 @@ if (isset($_POST["rencontre"])) {
                     </form> 
             <?php
                 }
-            ?>
+                ?>
         </div>
     </div>
     <div class="row py-5"></div>

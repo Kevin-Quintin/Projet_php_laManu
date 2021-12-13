@@ -17,7 +17,7 @@
     <!-- Lien Icon Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets\css\style.css">
-    <title>Hello, world!</title>
+    <title>Lovers - Faite des vrais rencontres</title>
 </head>
 
-<body class="bg-danger bg-opacity-25">
+<body class="bg-danger bg-opacity-10 form-box">

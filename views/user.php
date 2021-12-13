@@ -2,6 +2,11 @@
 <?php
 include_once("../header.php");
 include_once("../controllers/user_controller.php");
+if ($_COOKIE['Recherche'] == "1") {
+    $genreRecherche = "Femme";
+} else {
+    $genreRecherche = "Homme";
+}
 ?>
 <div class="container-fluid mt-5 d-flex justify-content-center ">
     <!-- info profil -->
